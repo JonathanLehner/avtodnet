@@ -1,8 +1,8 @@
 <html>
-    <head>
-    </head>
+    <head></head>
     <body>
-        <p>js sm retard</p>
-        <p>NE PA NE</p>
+        <p>trolled</p>
+        <p>js sm rotovnik pa sm prizadet</p>
+        <p>xddddddddddddddd</p>
     </body>
 </html>
