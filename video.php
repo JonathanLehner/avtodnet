@@ -11,10 +11,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 		
 		<!-- JS ZA VIDEO -->
-		<script type="text/javascript" src="assets/js/jwplayer.js"></script>
-
+    	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	    <script type="text/javascript" src="botr/upload.js"></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
   
 	</head>
@@ -40,53 +41,42 @@
 											<header class="style1">
 												<h2>Video</h2>
 											</header>
-											
-											
-											<form method='POST' enctype='multipart/form-data'>
-												Name:<input type='text' name='vid_name'>
-												<br>
-												Video:<input type='file' name='video'>
-												<br>
-												<input type='submit'>
-											</form>
-											<hr>
-											<h1>Video</h1>
-											
-											
-											<script src="//content.jwplatform.com/players/mXZ90E4F-uiYEhOoF.js"></script>
-											
-											<div class="video">
-												<video controls="controls" poster="https://gyazo.com/3f56c3c048a13660cbed54066e8154e9.jpg" width="480" height="360">
-												<source src="https://i.gyazo.com/ad18c783c8c7a2c5c969767accdc39de.mp4" type="video/mp4" />
-												<object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
-													<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
-													<param name="allowFullScreen" value="true" />
-													<param name="wmode" value="transparent" />
-													<param name="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':false}]}" />
-												<img alt="Shit" src="" width="640" height="360" title="eksde" />
-												</object>
-											</video>
-											<p>
-												<strong>View source:</strong> <a href="https://i.gyazo.com/ad18c783c8c7a2c5c969767accdc39de.mp4">MP4 format</a>
-											</p>
-											</div>
-											
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-		<!-- Scripts -->
+<?php
+if (isset($_REQUEST['upload']))
+{
+$name=$_FILES['uploadvideo']['name'];
+ $type=$_FILES['uploadvideo']['type'];
+//$size=$_FILES['uploadvideo']['size'];
+$cname=str_replace(" ","_",$name);
+$tmp_name=$_FILES['uploadvideo']['tmp_name'];
+$target_path="video/";
+$target_path=$target_path.basename($cname);
+if(move_uploaded_file($_FILES['uploadvideo']['tmp_name'],$target_path))
+{
+echo $sql="INSERT INTO tbl_video(name,type) VALUE('".$cname."','".$type."')"; 
+$result=mysql_query($sql);
+echo "Your video ".$cname." has been successfully uploaded";
+}
+}
+?>
+<form name="video" enctype="multipart/form-data" method="post" action="">
+<input name="MAX_FILE_SIZE" value="100000000000000"  type="hidden"/>
+<input type="file" name="uploadvideo" />
+<input type="submit" name="upload" value="SUBMIT" />
+</form>
 
-			<script src="assets/js/jquery.min.js"></script>
+
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/skel-viewport.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			<script src="http://content.jwplatform.com/libraries/uiYEhOoF.js"></script>
 
-
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 	</body>
 </html>

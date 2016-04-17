@@ -11,12 +11,6 @@
 		Company : One Mighty Roar (www.onemightyroar.com)
 		License : MIT License / GPL License
 	-->
-	
-	<?php
-$directory = "upload/uploads";
-$images = glob($directory . "*.png");
-?>
-
 
 	<head>
 
@@ -33,6 +27,7 @@ $images = glob($directory . "*.png");
 		<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
 		
 		<script type="text/javascript">
+		
 			
 			jQuery(function($){
 				
@@ -66,28 +61,31 @@ $images = glob($directory . "*.png");
 					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
 					thumb_links				:	1,			// Individual thumb links for each slide
 					thumbnail_navigation    :   0,			// Thumbnail navigation
+					
 					slides 					:  	[			// Slideshow Images
 					
-					<?php
-					
-					foreach($images as $image)
-					
-					?>
-					{image : 'http://avtodnet-zanr512.c9users.io/'<?php $image ?>},
-					
-					
-
-
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-1.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-2.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-2.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},  
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-3.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-3.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/wojno-1.jpg', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-1.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/wojno-2.jpg', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-2.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/wojno-3.jpg', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-3.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/shaden-1.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-1.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/shaden-2.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-2.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/shaden-3.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-3.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'}
-												],
+                                                            	
+                                                		<?php
+														
+														$dir = "../../upload/uploads";
+                                                        
+                                                        if ($opendir = opendir($dir))
+                                                        {
+                                                            while(($file = readdir($opendir)) !== FALSE)
+                                                            {
+                                                            	if ($file!="."&&$file!="..")
+                                                                {
+                                                            	?>
+                                                            	
+                                                    	{image :	 'https://avtodnet-zanr512.c9users.io/upload/uploads/<?php $file; ?>'},
+                                                            	 
+                                                            	<?php
+                                                            	}
+                                                            }
+                                                        }
+                                                        
+                                                        ?>
+														],
 												
 					// Theme Options			   
 					progress_bar			:	1,			// Timer for each slide							

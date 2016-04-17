@@ -1,0 +1,24 @@
+[11-Apr-2016 06:42:19 UTC] PHP Warning:  move_uploaded_file(uploads/Dinozaver.JPG): failed to open stream: No such file or directory in /home/ubuntu/workspace/upload/upload.php on line 15
+[11-Apr-2016 06:42:19 UTC] PHP Stack trace:
+[11-Apr-2016 06:42:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/upload/upload.php:0
+[11-Apr-2016 06:42:19 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/upload/upload.php:15
+[11-Apr-2016 06:42:19 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpZSkaEQ' to 'uploads/Dinozaver.JPG' in /home/ubuntu/workspace/upload/upload.php on line 15
+[11-Apr-2016 06:42:19 UTC] PHP Stack trace:
+[11-Apr-2016 06:42:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/upload/upload.php:0
+[11-Apr-2016 06:42:19 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/upload/upload.php:15
+[11-Apr-2016 06:42:33 UTC] PHP Warning:  move_uploaded_file(uploads/galeb.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/upload/upload.php on line 15
+[11-Apr-2016 06:42:33 UTC] PHP Stack trace:
+[11-Apr-2016 06:42:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/upload/upload.php:0
+[11-Apr-2016 06:42:33 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/upload/upload.php:15
+[11-Apr-2016 06:42:33 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php9TPsks' to 'uploads/galeb.jpg' in /home/ubuntu/workspace/upload/upload.php on line 15
+[11-Apr-2016 06:42:33 UTC] PHP Stack trace:
+[11-Apr-2016 06:42:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/upload/upload.php:0
+[11-Apr-2016 06:42:33 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/upload/upload.php:15
+[11-Apr-2016 06:43:38 UTC] PHP Warning:  move_uploaded_file(uploads/21341.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/upload/upload.php on line 15
+[11-Apr-2016 06:43:38 UTC] PHP Stack trace:
+[11-Apr-2016 06:43:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/upload/upload.php:0
+[11-Apr-2016 06:43:38 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/upload/upload.php:15
+[11-Apr-2016 06:43:38 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpCz0koZ' to 'uploads/21341.jpg' in /home/ubuntu/workspace/upload/upload.php on line 15
+[11-Apr-2016 06:43:38 UTC] PHP Stack trace:
+[11-Apr-2016 06:43:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/upload/upload.php:0
+[11-Apr-2016 06:43:38 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/upload/upload.php:15

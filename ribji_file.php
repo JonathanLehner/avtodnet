@@ -7,126 +7,72 @@
         {
             header('Location: index.php');
         }
+    
+    $trol = "HRVASKA";
 ?>
-<head>
-    		<link rel="stylesheet" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
-</head>
-
-
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
+	</head>
+	<body class="right-sidebar">
+		<div id="page-wrapper">
+		
 
 			<!-- Main -->
 				<div class="wrapper style2">
-					<div class="title">Preglednica uvoženih delov</div>
-					<div id="main" class="container">
-						<div class="row 150%">
+					<div class="title">ADMIN TAB</div>
+					<div id="main" class="container_2">
+						<div class="row 100%">
 							<div class="8u 12u(mobile)">
 
 								<!-- Content -->
 									<div id="content">
-										<article class="box post">
-											<header class="style1">
-												<h2>ČE SI ADMIN</h2>
-												<p>lahko tule vidiš ful velik, če pa nisi pa jebi ga</p>
-											</header>
-										</article>
-									</div>
+										
+										<ul class="admin_ul">
+											<a href="#" id="tabela_to" class="button style1">Tabela vseh avtomobilskih delov</a>
+											<a href="#" id="graf_to" class="button style1">Graf</a>
+										</ul>
+											
 
-							</div>
-							<div class="4u 12u(mobile)">
+									        
 
-								<!-- Sidebar -->
-									<div id="sidebar">
-										<section class="box">
-											<header>
-												<h2>Vitae turpis consequat</h2>
-											</header>
-											<ul class="style2">
-												<li>
-													<article class="box post-excerpt">
-														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
-														<h3><a href="#">Diam odio lorem</a></h3>
-														<p>Duis odio diam, luctus et vulputate vitae, vehicula ac dolor. Pellentesque at urna eget tellus sed etiam.</p>
-													</article>
-												</li>
-												<li>
-													<article class="box post-excerpt">
-														<a href="#" class="image left"><img src="images/pic09.jpg" alt="" /></a>
-														<h3><a href="#">Sed duis consequat</a></h3>
-														<p>Duis odio diam, luctus et vulputate vitae, vehicula ac dolor. Pellentesque at urna eget tellus sed etiam.</p>
-													</article>
-												</li>
-												<li>
-													<article class="box post-excerpt">
-														<a href="#" class="image left"><img src="images/pic10.jpg" alt="" /></a>
-														<h3><a href="#">Tellus nulla volutpat</a></h3>
-														<p>Duis odio diam, luctus et vulputate vitae, vehicula ac dolor. Pellentesque at urna eget tellus sed etiam.</p>
-													</article>
-												</li>
-											</ul>
-											<a href="#" class="button style1">Archives</a>
-										</section>
+										
+										<div class="xd" style="display: none">
+										<table border="1" id="myTable" class="tablesorter"> 
+					                                        <thead> 
+					                                        <tr> 
+					                                            <th>Last Name</th> 
+					                                            <th>First Name</th> 
+					                                            <th>Email</th> 
+					                                            <th>Due</th> 
+					                                            <th>Web Site</th> 
+					                                        </tr> 
+					                                        </thead> 
+					                                        <tbody> 
+					                                       		<?php
+					                                       		
+					                                       		for($x=1; $x<200; $x++)
+					                                       		{
+					                                       			echo "<tr> 
+					                                            <td>Conway</td> 
+					                                            <td>Tim</td> 
+					                                            <td>tconway@earthlink.net</td> 
+					                                            <td>$50.00</td> 
+					                                            <td>http://www.timconway.com</td> 
+					                                        </tr> ";
+					                                       		}
+					                                       		
+					                                       		?>
+					                                        </tbody> 
+					                                        </table>
+					                    </div>
+      
+					                    <div id="graf" style="min-width: 420px; height: 500px; max-width: 600px; margin: 0 auto; display: none;"></div>
+
 									</div>
 
 							</div>
 						</div>
 					</div>
 				</div>
-
-			<!-- Highlights -->
-				<div class="wrapper style3">
-					<div class="title">The Endorsements</div>
-					<div id="highlights" class="container">
-						<div class="row 150%">
-							<div class="4u 12u(mobile)">
-								<section class="highlight">
-                                    <table border="1" id="myTable" class="tablesorter"> 
-                                        <thead> 
-                                        <tr> 
-                                            <th>Last Name</th> 
-                                            <th>First Name</th> 
-                                            <th>Email</th> 
-                                            <th>Due</th> 
-                                            <th>Web Site</th> 
-                                        </tr> 
-                                        </thead> 
-                                        <tbody> 
-                                        <tr> 
-                                            <td>Smith</td> 
-                                            <td>John</td> 
-                                            <td>jsmith@gmail.com</td> 
-                                            <td>$50.00</td> 
-                                            <td>http://www.jsmith.com</td> 
-                                        </tr> 
-                                        <tr> 
-                                            <td>Bach</td> 
-                                            <td>Frank</td> 
-                                            <td>fbach@yahoo.com</td> 
-                                            <td>$50.00</td> 
-                                            <td>http://www.frank.com</td> 
-                                        </tr> 
-                                        <tr> 
-                                            <td>Doe</td> 
-                                            <td>Jason</td> 
-                                            <td>jdoe@hotmail.com</td> 
-                                            <td>$100.00</td> 
-                                            <td>http://www.jdoe.com</td> 
-                                        </tr> 
-                                        <tr> 
-                                            <td>Conway</td> 
-                                            <td>Tim</td> 
-                                            <td>tconway@earthlink.net</td> 
-                                            <td>$50.00</td> 
-                                            <td>http://www.timconway.com</td> 
-                                        </tr> 
-                                        </tbody> 
-                                        </table> 
-								</section>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
 		</div>
 
 		<!-- Scripts -->
@@ -139,11 +85,92 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script type="text/javascript" src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+			<script src="https://code.highcharts.com/highcharts.js"></script>
+			<script src="https://code.highcharts.com/modules/exporting.js"></script> <!-- TULE SO FUL FAJN GRAF -->
+			<script src="https://code.highcharts.com/modules/data.js"></script>
+			
+			
 			<script type="text/javascript">
 				$(document).ready(function(){
 					    $('#myTable').DataTable();
 					});
 			</script>
+			<script>
+				$(document).ready(function(){
+				    $("#tabela_to").click(function(){
+				        $(".xd").toggle();
+				        $("#graf").hide();
+				    });
+				});
+				
+				$(document).ready(function(){
+				    $("#graf_to").click(function(){
+				        $("#graf").toggle();
+				        $(".xd").hide();
+				    });
+				});
+			</script>
+			
+			
+			<script>
+				$(function () {
+					
+					    $(document).ready(function () {
+					
+					        // Build the chart
+					        $('#graf').highcharts({
+					            chart: {
+					                plotBackgroundColor: null,
+					                plotBorderWidth: null,
+					                plotShadow: false,
+					                type: 'pie'
+					            },
+					            title: {
+					                text: 'Raznolikost '
+					            },
+					            tooltip: {
+					                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+					            },
+					            plotOptions: {
+					                pie: {
+					                    allowPointSelect: true,
+					                    cursor: 'pointer',
+					                    dataLabels: {
+					                        enabled: false
+					                    },
+					                    showInLegend: true
+					                }
+					            },
+					            series: [{
+					                name: 'Brands',
+					                colorByPoint: true,
+					                data: [{
+					                    name: 'Microsoft Internet Explorer',
+					                    y: 56.33
+					                }, {
+					                    name: 'Chrome',
+					                    y: 24.03,
+					                    sliced: true,
+					                    selected: true
+					                }, {
+					                    name: '<?php echo $trol; ?>',
+					                    y: 10.38
+					                }, {
+					                    name: 'Safari',
+					                    y: 4.77
+					                }, {
+					                    name: 'Opera',
+					                    y: 0.91
+					                }, {
+					                    name: 'Proprietary or Undetectable',
+					                    y: 0.2
+					                }]
+					            }]
+					        });
+					    });
+					});
+			</script>
+			
             
             
             
